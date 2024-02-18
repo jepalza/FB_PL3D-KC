@@ -10,11 +10,8 @@ Ademas, no emplea valores flotantes, solo enteros, para darle velocidad. El resu
 
 
 Para poder compilar he anulado estas lineas en FW\WVID.C :
-
 linea 186 -> SetProcessDPIAware();
-
 linea 213 -> AdjustWindowRectExForDpi(&r, style, 0, 0, GetDpiForWindow(FWi_wnd));
-
 por que GCC no tiene esas llamadas. Al parecer solo son para MSVC, pero veo que no afecta y funciona igualmente sin ellas...
 
 
