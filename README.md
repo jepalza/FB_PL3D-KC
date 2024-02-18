@@ -5,7 +5,7 @@ FreeBasic motor 3D solo por "software" basado en PL3D-KC:
 
 Que a su vez está basado en el juego:
 
-    https://github.com/LMP88959/PL3D-KC
+    https://kingscrook.itch.io/kings-crook#download
 
 
 Es un motor gráfico sencillo, pensado en la simplicidad, usando solo métodos "software", sin "hardware" dedicado que no sea la propia CPU.
