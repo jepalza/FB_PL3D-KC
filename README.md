@@ -1,5 +1,7 @@
 # FB_PL3D-KC
-FreeBasic motor 3D solo por "software" basado en PL3D-KC
+FreeBasic motor 3D solo por "software" basado en PL3D-KC:
+
+    https://github.com/LMP88959/PL3D-KC
 
 Es un motor gráfico muy simple, pensado para la simplicidad usando solo métodos "software", sin "hardware" dedicado que no sea la propia CPU.
 
@@ -11,9 +13,9 @@ Ademas, no emplea valores flotantes, solo enteros, para darle velocidad. El resu
 
 Para poder compilar he anulado estas lineas en FW\WVID.C :
 
-linea 186 -> SetProcessDPIAware();
+     linea 186 -> SetProcessDPIAware();
 
-linea 213 -> AdjustWindowRectExForDpi(&r, style, 0, 0, GetDpiForWindow(FWi_wnd));
+     linea 213 -> AdjustWindowRectExForDpi(&r, style, 0, 0, GetDpiForWindow(FWi_wnd));
 
 por que GCC no tiene esas llamadas. Al parecer solo son para MSVC, pero veo que no afecta y funciona igualmente sin ellas...
 
