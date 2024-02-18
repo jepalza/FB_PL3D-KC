@@ -3,9 +3,14 @@ FreeBasic motor 3D solo por "software" basado en PL3D-KC:
 
     https://github.com/LMP88959/PL3D-KC
 
-Es un motor gráfico muy simple, pensado para la simplicidad usando solo métodos "software", sin "hardware" dedicado que no sea la propia CPU.
+Que a su vez está basado en el juego:
 
-Ademas, no emplea valores flotantes, solo enteros, para darle velocidad. El resultado es una apariencia muy de los 80's-90's con "pixel" gordos y deformados.
+    https://github.com/LMP88959/PL3D-KC
+
+
+Es un motor gráfico sencillo, pensado en la simplicidad, usando solo métodos "software", sin "hardware" dedicado que no sea la propia CPU.
+
+Ademas, no emplea valores flotantes, solo enteros, para mayor velocidad. El resultado es una apariencia muy de los 80's-90's con "pixel" gordos y deformados.
 
 
 
@@ -21,9 +26,7 @@ por que GCC no tiene esas llamadas. Al parecer solo son para MSVC, pero veo que 
 
 
 
-Ademas,parapoer usar el motor 3D en FreeBasic, he añadiro estas lineas:
-
-en el fichero PL.C, linea 31 aprox, tras las variables 
+Ademas,para poder usar el motor 3D en FreeBasic, he añadido estas lineas en el fichero PL.C, linea 31 aprox, tras las variables 
 
 	int PL_fov          = 9;
  
@@ -33,9 +36,7 @@ en el fichero PL.C, linea 31 aprox, tras las variables
 
  
 
-Añadimos estas (son para que en FreeBasic podamos asignar las anteriores variables como subrutinas, por que el 
-
-sistema del FB para acceder a variables en DLL (extern import ...) no parece funcionar
+Añadimos estas (son para que en FreeBasic podamos asignar las anteriores variables como subrutinas, por que el sistema del FB para acceder a variables en DLL (extern import ...) no parece funcionar
 
 	// jepalza, necesarias para asignar las variables "extern" que FreeBasic no puede acceder
  
@@ -51,7 +52,7 @@ sistema del FB para acceder a variables en DLL (extern import ...) no parece fun
 	
 Tenemos tambien que hacer lo mismo en PL.H:
 
-linea 88 aprox., donde estan las varaibles "extern"
+linea 88 aprox., donde estan las variables "extern"
 
 	extern int PL_fov; /* min valid value = 8 */
  
@@ -75,5 +76,8 @@ Añadimos estas:
  
 	extern void PL_Set_Cur_Tex(struct PL_TEX *tex); //jepalza, para asignar la variable TEX externamente desde FB
 
+ Lo compilamos como LIB tipo .A , que es el formato empleado por FB. (ya he dejado una copia compilada)
+
+ Está lejos de ser un motor perfecto, ademas, está limitado en sus funciones, y no alcanza el nivel del juego del que proviene, pero es un buen punto de partida para seguir ampliando.
 
  
